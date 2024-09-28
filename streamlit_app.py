@@ -59,7 +59,7 @@ cloud_explainer_location = 'https://drive.google.com/u/0/uc?id=1SRY7LNPGQRlm7lJc
 
 #     save_dest = Path('model')
 #     save_dest.mkdir(exist_ok=True)  
-#     f_checkpoint = Path("model/rf_compressed.pkl")
+#     f_checkpoint = Path("model/rf_compressed.pklrf_compressed.pkl")
 #     f_checkpoint1 = Path("model/shap_explainer.pkl")
 #     # download from GD if model or explainer not present
 #     if not f_checkpoint.exists():
