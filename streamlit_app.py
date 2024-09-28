@@ -80,8 +80,10 @@ def load_model(cloud_model_location, cloud_explainer_location):
     # https://clay-atlas.com/us/blog/2021/07/01/python-en-gdown-package-download-file-google-drive/
     if not os.path.exists('model'):
         os.makedirs('model')
-    model_save_path = "/workspaces/hdb-dashboard/model/rf_compressed.pkl"
-    explainer_save_path = "/workspaces/hdb-dashboard/model/shap_explainer.pkl"
+
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    model_save_path = dir_path + "/model/rf_compressed.pkl"
+    explainer_save_path = dir_path + "/model/shap_explainer.pkl"
     if not os.path.exists(model_save_path):
         with st.spinner("Downloading model... this may take awhile! \n Don't stop it!"):
             gdown.download(cloud_model_location, model_save_path)
